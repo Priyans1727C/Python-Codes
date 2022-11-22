@@ -31,3 +31,15 @@ for i in range(a):
 
 print()
 print()
+
+#down right triangle
+
+for i in range(a):
+    for k in range(i):
+        print(" ",end=" ")
+    for s in range(a-i):
+        print("*",end=" ")
+    print()
+
+print()
+print()
