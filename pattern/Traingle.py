@@ -43,3 +43,18 @@ for i in range(a):
 
 print()
 print()
+
+#up empty right triangle
+
+for i in range(a):
+    for k in range(i+1):
+        if i==0 or i==a-1:
+            print("*",end=" ")
+        elif k==0 or k==i:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+print()
+print()
