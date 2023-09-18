@@ -56,7 +56,20 @@ def update():
     except Exception as f:
         print('NO data found!')
         print(f)
- 
+
+def searching():
+    reg_no=input()
+    with open('database.json','r') as f:
+        data=json.loads(f.read())
+        try:
+            print(data[reg_no])   
+        except:
+            print('No data found!')
+
+def display():
+    with open('database.json','r')as f:
+        print(f.read())
+
 
 choice=int(input('choice: '))
 if(choice==1):
@@ -64,5 +77,11 @@ if(choice==1):
     insertion(temp_data)
 elif(choice==2):
     update()
+else:
+    print("Enter valid choice")
+elif(choice==3):
+    display()
+elif(choice==4):
+    searching()
 else:
     print("Enter valid choice")
