@@ -1,21 +1,21 @@
 import json
+import pyfiglet
 
 def inputs():
     print()
     data={}
-    student_size=int(input('no_of_stdents: '))
+    student_size=int(input('No_Of_Stdents: '))
     print()
     for i in range(0,student_size):
-        print(f"Student Details {i+1}:")
-        print() 
-        reg_no=input('    reg_no     : ')
+        print(f"Student Details {i+1}:") 
+        reg_no=int(input('    Reg_no     : '))
         name=input('    Name       : ')
         occupation=input('    Occupation : ')
         dob=input('    DOB        : ')
         value={'Name':name,'Occupation':occupation,'DOB':dob}
         data[reg_no]=value
     return data
-
+    
 
 def insertion(temp_data):
     data={}
@@ -56,7 +56,7 @@ def update():
     except Exception as f:
         print('NO data found!')
         print(f)
-
+      
 def searching():
     reg_no=input()
     with open('database.json','r') as f:
@@ -70,18 +70,38 @@ def display():
     with open('database.json','r')as f:
         print(f.read())
 
+                
+print('''\033[36m 
+      
+    ________            __          __________                          
+    \______ \  _____  _/  |_ _____  \______   \_____     ______  ____   
+     |    |  \ \__  \ \   __\\\__  \  |    |  _/\__  \   /  ___/_/ __ \  
+     |    `   \ / __ \_|  |   / __ \_|    |   \ / __ \_ \___ \ \  ___/  
+    /_______  /(____  /|__|  (____  /|______  /(____  //____  > \___  > 
+            \/      \/            \/        \/      \/      \/      \/  
+                                                                    
+      
+                                            \033[32m   ~by Priyanshu Singh  \033[39m
+      ''')
+print()
+print("Choices are: \n\n    1)Creation\n    2)Updation\n    3)Display\n    4)Searching")
+print()
 
-choice=int(input('choice: '))
-if(choice==1):
-    temp_data=inputs()
-    insertion(temp_data)
-elif(choice==2):
-    update()
-else:
-    print("Enter valid choice")
-elif(choice==3):
-    display()
-elif(choice==4):
-    searching()
-else:
-    print("Enter valid choice")
+while(True):
+    try:
+        choice=int(input('Enter choice: '))
+        if(choice==1):
+            temp_data=inputs()
+            insertion(temp_data)
+        elif(choice==2):
+            update()
+        elif(choice==3):
+            display()
+        elif(choice==4):
+            searching()
+        elif(choice==0):
+            break
+        else:
+            print("Enter valid choice")
+    except Exception as s:
+            print("Enter valid choice\nProblem: ",s)
