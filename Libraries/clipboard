@@ -1,0 +1,17 @@
+import clipboard
+
+def copy_to_clipboard(text):
+    clipboard.copy(text)
+    print(f'Text copied to clipboard: {text}')
+
+def paste_from_clipboard():
+    text = clipboard.paste()
+    print(f'Text pasted from clipboard: {text}')
+    return text
+
+# Example usage:
+text_to_copy = "Hello, clipboard!"
+copy_to_clipboard(text_to_copy)
+
+pasted_text = paste_from_clipboard()
+print("Text pasted:", pasted_text)
