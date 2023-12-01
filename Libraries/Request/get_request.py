@@ -17,6 +17,7 @@ print(response.json())
 url2= "https://httpbin.org/get"
 payload={'key':'value','key2':'value2'}
 
+#get request with paramaters
 r=req.get(url2,params=payload)
 
 print(r.url)
