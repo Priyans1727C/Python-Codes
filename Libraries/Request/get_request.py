@@ -1,25 +1,19 @@
 import requests as req
 
-url="https://httpbin.org/basic-auth/user/pass"
+# URL for basic authentication
+url_auth = "https://httpbin.org/basic-auth/user/pass"
 
+# URL for a GET request with parameters
+url_get = "https://httpbin.org/get"
 
-#normal get request
-# response=req.get(url)
+# Basic authentication
+response_auth = req.get(url_auth, auth=('user', 'pass'))
+print("Authentication Status Code:", response_auth.status_code)
+print("Authentication Response:", response_auth.json())
+print()
 
-#Get request with authentication
-response=req.get(url,auth=('user','pass'))
-
-print(response.status_code)
-
-print(response.json())
-
-
-url2= "https://httpbin.org/get"
-payload={'key':'value','key2':'value2'}
-
-#get request with paramaters
-r=req.get(url2,params=payload)
-
-print(r.url)
-
-print(r.text)
+# GET request with parameters
+payload = {'key': 'value', 'key2': 'value2'}
+response_get = req.get(url_get, params=payload)
+print("GET Request URL:", response_get.url)
+print("GET Request Response:", response_get.text)
