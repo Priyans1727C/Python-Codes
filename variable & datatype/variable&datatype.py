@@ -1,16 +1,22 @@
-############### Variable is name given to a memory location in a program #############
-# For example:
-a=30
-b="hello"
-c="30"
-d=71.2
-e=True
+import sys
 
-#Printing data type of value asign in variable a,b,c,d
-#Using type() function:
+a = 30
+b = "hello"
+c = "30"
+d = 71.2
+e = True
 
-print(type(a))     #integer
-print(type(b))     #string 
-print(type(c))     #string-- any thing inside in double quoit is a string
-print(type(d))     #float--  any decimal nuber are count in float
-print(type(e))     #bollean-- this contain only True and False 
+# Printing data type of values assigned to variables a, b, c, d
+# Using type() function:
+print(type(a))  # integer
+print(type(b))  # string
+print(type(c))  # string -- anything inside double quotes is a string
+print(type(d))  # float -- any decimal number is counted as a float
+print(type(e))  # boolean -- this contains only True and False
+
+# Print the size of each variable in terms of memory consumption
+print(f"Size of variable 'a': {sys.getsizeof(a)} bytes")
+print(f"Size of variable 'b': {sys.getsizeof(b)} bytes")
+print(f"Size of variable 'c': {sys.getsizeof(c)} bytes")
+print(f"Size of variable 'd': {sys.getsizeof(d)} bytes")
+print(f"Size of variable 'e': {sys.getsizeof(e)} bytes")
