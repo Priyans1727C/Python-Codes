@@ -52,11 +52,25 @@ def operators():
 
 def universal_function():
     global array1,array2
-    
+###########################|  Arithmetic Functions   |#################################
+  
+    print("Arithmetic Functions: ")
     print("add(array1,array2): ",np.add(array1,array2))
     print()
     
-    print("negative(array1): ",np.negative(array1))
+    print("subtract(array1,array2): ",np.subtract(array1,array2))
+    print()
+    
+    print("multiply(array1,array2): ",np.multiply(array1,array2))
+    print()
+    
+    print("divide(array1,array2): ",np.divide(array1,array2))
+    print()
+    
+    print("power(array1,array2): ",np.power(array1,array2))
+    print()
+    
+    print("mod(array1,array2): ",np.mod(array1,array2))
     print()
     
     print("square(array1): ",np.square(array1))
@@ -65,14 +79,40 @@ def universal_function():
     print("sqrt(array1): ",np.sqrt(array1))
     print()
     
+    print("divmod(array1,array2): ",np.divmod(array1,array2))
+    print()
+    
+    print("absolute(array1,array2): ",np.absolute(array1,array2))
+    print()
+###############################| End |###############################################
+
+############################ |  Rounding Decimals |  #################################
+    print("\nRounding Decimals: ")
+    print("ceil(array1): ",np.ceil(array1))
+    print()
+    
+    print("np.trunc(array1): ",np.trunc(array1))
+    print()
+    
+    print("np.fix(array1): ",np.fix(array1))
+    print()
+    
+    print("np.around(array1): ",np.around(array1))
+    print()
+    
+    print("np.floor(array1): ",np.floor(array1))
+    print()
+
+########################### | End | ###############################3
+    print("negative(array1): ",np.negative(array1))
+    print()
+    
     print("hypot(array1,array2): ",np.hypot(array1,array2))
     print()
     
     print("greater(array1,array2): ",np.greater(array1,array2))
     print()
     
-    print("ceil(array1): ",np.ceil(array1))
-    print()
 
 #Main Function
 while(True):
